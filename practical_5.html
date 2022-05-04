@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Something cool</title>
+    <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico"/>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="carousel.css" />
+
+</head>
+<body>
+
+
+    <header class="wrapper">
+        <div class="first">
+            <a href="https://google.com"><img src="./images/favicon.ico" alt="twitter" width="90" height="90"></a>
+        </div>
+        <h1 class="second">
+           Extra creative title
+        </h1>
+    </header>
+
+    <main>
+        <div class="middle">
+            <img src="./images/backpic.png" alt="backpic" width="754">
+            <div class="text">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel magna euismod, dictum mauris sit amet, tincidunt ex.
+                    <span class="pq">Sed eu iaculis eros. </span>
+                    Ut laoreet ipsum at fringilla pellentesque. Ut consectetur lacus et nisi pulvinar molestie. Donec nec ultricies justo.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="the-end">
+            <div class="one">
+                <img src="./images/pic1.png" alt="pic1" width="138" height="180">
+            </div>
+            <div class="two">
+                <img src="./images/pic2.png" alt="pic2" width="138" height="180">
+            </div>
+            <div class="three">
+                <img src="./images/pic3.png" alt="pic3" width="138" height="180">
+            </div>
+            <div class="four">
+                <img src="./images/pic4.png" alt="pic4" width="138" height="180">
+            </div>
+            <div class="five">
+                <img src="./images/pic5.png" alt="pic4" width="138" height="180">
+            </div>
+        </div>
+    </footer>
+
+    <div class="gallery">
+        <div class="gallery-container">
+            <img class="gallery-item" src="images/pic1.png">
+            <img class="gallery-item" src="images/pic2.png">
+            <img class="gallery-item" src="images/pic3.png">
+            <img class="gallery-item" src="images/pic4.png">
+            <img class="gallery-item" src="images/pic5.png">
+            <img class="gallery-item" src="images/pic4.png">
+            <img class="gallery-item" src="images/pic5.png">
+        </div>
+        <div class="gallery-controls"></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('span.pq').each(function () {
+                var quote=$(this).clone();
+                quote.removeClass('pq');
+                quote.addClass('pullquote');
+                $(this).before(quote);
+            }); //end each
+        }); //end ready
+    </script>
+</body>
+</html>
